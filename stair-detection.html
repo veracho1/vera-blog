@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why I taught a computer to see stairs | Vera's Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo">vera writes<span>.</span></a>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#posts">Posts</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="post">
+      <a href="index.html" class="back">&larr; Back to all posts</a>
+      <p class="date">November 2026</p>
+      <h1>Why I taught a computer to see stairs</h1>
+
+      <p>
+        My first real AI project started with my grandma. She has trouble seeing, and she fell
+        down the stairs because she couldn't tell where the next step was. It scared me a lot,
+        and I kept thinking: what if something could just tell her the stairs are there?
+      </p>
+
+      <p>
+        So the summer after 9th grade, I tried to build that.
+      </p>
+
+      <h2>The setup</h2>
+
+      <img src="https://veracho.com/assets/jetson-nano.png" alt="The NVIDIA Jetson Nano board on my desk with a fan and cables">
+      <p class="caption">My Jetson Nano. Tiny computer, a lot of cables.</p>
+
+      <p>
+        I used an NVIDIA Jetson Nano, which is basically a small computer made for running AI
+        models. Instead of training a model from nothing, I used transfer learning on
+        SSD-MobileNet. That means you take a model that already knows how to find objects and
+        retrain it on your own pictures, which in my case were a LOT of pictures of stairs.
+      </p>
+
+      <p>
+        After training, I exported the model to ONNX so it could run on the Jetson, and then
+        it could detect stairs in real time through the camera.
+      </p>
+
+      <img src="https://veracho.com/assets/stair-detection.png" alt="The model drawing a green box around stairs">
+      <p class="caption">It works!! The green box is the model finding the stairs.</p>
+
+      <h2>What I learned</h2>
+
+      <ul>
+        <li>How machine learning models actually get trained (it's a lot of data prep).</li>
+        <li>How to use Git, which I honestly did not understand before this.</li>
+        <li>Docker, and why everyone complains about it.</li>
+        <li>That the "why" behind a project keeps you going when things break.</li>
+      </ul>
+
+      <p>
+        I ended up earning the NVIDIA Deep Learning Institute certificate in AI and ML through
+        this project, and it's still the project I'm proudest of. If you want to see the code,
+        it's on my <a href="https://github.com/veracho1/StairDetection-AI" target="_blank">GitHub</a>.
+      </p>
+
+      <a href="techwise-seniors.html" class="next-post">Next post: Saturday tech support at church &rarr;</a>
+    </article>
+  </main>
+
+  <footer>
+    <p>Made by Vera Cho &middot; 2026</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+/* ===== colors + basic stuff ===== */
+/* same purple as my portfolio so it feels like "me" */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #2b2a2f;
+  background-color: #f8f7f3;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+a {
+  color: #60477f;
+}
+
+a:hover {
+  color: #2b2a2f;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* ===== header / nav ===== */
+
+header {
+  background-color: #e7e0f6;
+  border-bottom: 1px solid #d6cce8;
+}
+
+nav {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #2b2a2f;
+}
+
+.logo span {
+  color: #60477f;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #2b2a2f;
+}
+
+nav ul a:hover {
+  color: #60477f;
+  text-decoration: underline;
+}
+
+
+/* ===== main content ===== */
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  padding: 40px 0;
+  border-bottom: 1px solid #dedbdc;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+h2 {
+  font-size: 32px;
+  color: #60477f;
+}
+
+
+/* about me */
+.about {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.about img {
+  width: 260px;
+  border-radius: 130px 130px 10px 10px; /* arch shape like my portfolio */
+}
+
+.about h1 {
+  font-size: 44px;
+  margin-top: 0;
+}
+
+
+/* blog post cards on the homepage */
+.post-card {
+  display: flex;
+  gap: 25px;
+  background-color: white;
+  border: 1px solid #dedbdc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.post-card:hover {
+  border-color: #60477f;
+}
+
+.post-card img {
+  width: 220px;
+  height: 160px;
+  flex-shrink: 0; /* stops the pictures from getting squished */
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.post-card h3 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.post-card h3 a {
+  color: #2b2a2f;
+  text-decoration: none;
+}
+
+.post-card h3 a:hover {
+  color: #60477f;
+}
+
+.post-card p {
+  margin: 0 0 10px;
+}
+
+.date {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #68656f;
+  margin: 0 0 5px;
+}
+
+.read-more {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+/* contact */
+.contact-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-links a {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid #60477f;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  background-color: #60477f;
+  color: white;
+}
+
+
+/* ===== individual blog post pages ===== */
+
+.post {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.post h1 {
+  font-size: 40px;
+  margin-top: 5px;
+}
+
+.post h2 {
+  font-size: 26px;
+  margin-top: 40px;
+}
+
+.post img {
+  display: block;
+  border-radius: 8px;
+  margin-top: 25px;
+}
+
+.caption {
+  font-size: 14px;
+  color: #68656f;
+  font-style: italic;
+  margin-top: 6px;
+}
+
+.back {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.next-post {
+  display: block;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #e7e0f6;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/* ===== footer ===== */
+
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  color: #68656f;
+  border-top: 1px solid #dedbdc;
+}
+
+
+/* ===== phones / small screens ===== */
+
+@media (max-width: 700px) {
+  body {
+    font-size: 16px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about img {
+    width: 200px;
+  }
+
+  .about h1 {
+    font-size: 36px;
+  }
+
+  .post-card {
+    flex-direction: column;
+  }
+
+  .post-card img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .post h1 {
+    font-size: 32px;
+  }
+}
